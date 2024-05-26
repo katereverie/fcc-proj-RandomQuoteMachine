@@ -1,0 +1,143 @@
+:root {
+    --primary-color: hsl(0, 0%, 100%);
+    --secondary-color: hsl(0, 0%, 0%);
+    --accent-color: hsl(0, 87%, 41%);
+  }
+  
+* {
+font-family: Roboto, 'Times New Roman';
+font-size: 10px;
+color: var(--secondary-color);
+}
+  
+body {
+margin: 0;
+background-color: var(--secondary-color);
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+  
+footer {
+border: transparent;
+border-radius: 5px;
+box-shadow: 0 0 5px var(--primary-color);
+color: var(--primary-color);
+padding: 10px;
+margin: 20px 0;
+}
+footer p, span {
+color: var(--primary-color);
+margin: 0;
+font-size: 2.5rem;
+}
+footer #app-author {
+color: var(--accent-color);
+font-family: Silkscreen, Roboto, 'Times New Roman';
+}
+
+h1 {
+font-size: 2.5rem;
+border: transparent;
+border-radius: 5px;
+box-shadow: 0 0 5px var(--primary-color);
+color: var(--primary-color);
+
+padding: 10px;
+margin: 20px 0;
+}
+
+img {
+border-radius: 50%;
+max-width: 35px;
+}
+
+button {
+font-size: 1.6rem;
+background-color: var(--primary-color);
+border: transparent;
+border-radius: 15px;
+box-shadow: 0 0 5px var(--secondary-color);
+transition: ease 0.3s;
+margin-right: 10px;
+padding: 5px 10px;
+}
+button:hover {
+background-color: var(--secondary-color);
+color: var(--primary-color);
+box-shadow: 0 0 5px var(--primary-color);
+transition: ease 0.3s;
+}
+
+#quote-box,
+#saved-quotes {
+background-color: var(--primary-color);
+box-shadow: 0 0 5px var(--primary-color);
+margin-top: 20px;
+max-width: 400px;
+width: 90vw;
+}
+
+#saved-quotes {
+background-color: var(--secondary-color);
+}
+
+.hidden {
+display: none !important;
+}
+
+.quote-wrapper,
+.saved-quotes-wrapper {
+background-color: var(--primary-color);
+margin: 20px;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
+
+.saved-quotes-wrapper {
+background-color: var(--secondary-color);
+overflow-y: auto;
+max-height: 300px;
+padding: 10px;
+}
+
+#text {
+line-height: 1.8;
+font-size: 1.8rem;
+margin-bottom: 10px;
+}
+#author {
+font-style: italic;
+font-size: 2rem;
+color: var(--accent-color);
+}
+
+.button-wrapper {
+background-color: var(--primary-color);
+padding: 20px;
+display: flex;
+justify-content: space-evenly;
+min-height: 30px;
+}
+
+#clear-history-btn {
+margin-top: 20px;
+}
+
+.quote-item {
+width: 100%;
+margin-top: 0;
+border: 1px solid;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
+.quote-item > p {
+color: var(--primary-color);
+}
