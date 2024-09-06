@@ -3,6 +3,7 @@ import Card from "./Card";
 import History from "./History";
 
 const App = () => {
+
   const [history, setHistory] = useState([]);
   const [isHistoryVisible, setIsHistoryVisible] = useState(false);
 
@@ -16,6 +17,7 @@ const App = () => {
 
   const toggleHistory = () => {
     setIsHistoryVisible(!isHistoryVisible);
+    
   }
 
   return (

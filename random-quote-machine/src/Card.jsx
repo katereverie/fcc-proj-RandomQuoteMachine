@@ -9,6 +9,7 @@ const Card = ({ addQuoteToHistory, history, toggleHistory}) => {
   const API_URL = "https://api.quotable.io/random";
   
   const updateQuote = async () => {
+
     try {
       const response = await fetch(API_URL);
       const data = await response.json();
@@ -16,14 +17,17 @@ const Card = ({ addQuoteToHistory, history, toggleHistory}) => {
     } catch (error) {
       console.log(`Oops...there is an error fetching data: ${error}`)
     }
+
   }
   
   const saveQuote = () => {
+
     if (history.some((quote) => quote.content === data.content)) {
       alert("You have already saved this quote.")
     } else {
       addQuoteToHistory({ content: data.content, author: data.author});
     }
+
   }
 
   useEffect(() => {
@@ -41,6 +45,7 @@ const Card = ({ addQuoteToHistory, history, toggleHistory}) => {
   }
 
   return (
+
     <div id="quote-box">
       <div className="quote-wrapper">
         <p id="text">{data.content}</p>
@@ -61,6 +66,7 @@ const Card = ({ addQuoteToHistory, history, toggleHistory}) => {
         </a>  
     </div>
     </div>
+    
   );
 }
 
