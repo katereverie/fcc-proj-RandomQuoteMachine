@@ -6,13 +6,14 @@ const Card = ({ addQuoteToHistory, history, toggleHistory}) => {
 
   const [data, setData] = useState('');
 
-  const API_URL = "https://api.quotable.io/random";
+  const API_URL = "https://api.quotable.io/quotes/random";
   
   const updateQuote = async () => {
 
     try {
       const response = await fetch(API_URL);
       const data = await response.json();
+      console.log(data);
       setData(data);
     } catch (error) {
       console.log(`Oops...there is an error fetching data: ${error}`)
